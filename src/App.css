@@ -1,38 +1,291 @@
-.App {
-  text-align: center;
+@font-face {
+    font-family: 'Godo';
+    font-style: normal;
+    font-weight: 400;
+    src: url('//cdn.jsdelivr.net/korean-webfonts/1/corps/godo/Godo/GodoM.woff2') format('woff2'), url('//cdn.jsdelivr.net/korean-webfonts/1/corps/godo/Godo/GodoM.woff') format('woff');
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+@font-face {
+    font-family: 'Godo';
+    font-style: normal;
+    font-weight: 700;
+    src: url('//cdn.jsdelivr.net/korean-webfonts/1/corps/godo/Godo/GodoB.woff2') format('woff2'), url('//cdn.jsdelivr.net/korean-webfonts/1/corps/godo/Godo/GodoB.woff') format('woff');
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+* {
+    font-family: 'Godo', sans-serif;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+* {
+    box-sizing: border-box;
+    color: #3f3f3f;
 }
 
-.App-link {
-  color: #61dafb;
+input[type=number]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+html {
+    font-family: sans-serif;
+    /* background-color: black; */
+}
+
+header {
+    position: fixed;
+    width: 100%;
+    z-index: 1100;
+}
+
+.box-shadow {
+    box-shadow: 0 10px 40px -10px rgba(0, 64, 128, .2);
+}
+
+.content {
+    /* background-color: #e4ecf2; */
+    justify-content: center;
+    align-content: center;
+    display: flex;
+    padding: 10px;
+    padding-top: 70px;
+}
+
+.applicants-view {
+    width: 800px;
+}
+
+table.applicants-view {
+    text-align: center;
+    border-collapse: collapse;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-top: 27px;
+    box-shadow: 0 10px 40px -10px rgba(0, 64, 128, .2);
+}
+
+table.applicants-view td,
+table.applicants-view th {
+    padding: 15px;
+}
+
+table.applicants-view thead {
+    background-color: #99cfff;
+}
+
+table.applicants-view th {
+    border-bottom: 1px solid #99cfff;
+    /* color: white; */
+}
+
+table.applicants-view td {
+    border-bottom: 1px solid #ddd;
+}
+
+table.applicants-view tr:not(.nothover):hover {
+    /* background-color:; */
+}
+
+a:hover {
+    color: #99cfff
+}
+
+.applicant-detail-view {
+    width: 800px;
+}
+
+.applicant-info {
+    display: flex;
+    margin: 27px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 10px 40px -10px rgba(0, 64, 128, .5);
+    text-align: center;
+}
+
+.applicant-info .profile {
+    float: left;
+    width: 250px;
+    padding: 30px;
+    background-color: whitesmoke;
+}
+
+.applicant-info .intro {
+    background-color: white;
+    padding: 30px;
+    width: calc(100% - 250px);
+    display: flex;
+    align-items: center;
+    vertical-align: center;
+    justify-content: center;
+    transition: 0.4s;
+}
+
+.applicant-info .profile p {
+    line-height: 0.5;
+    font-size: 0.9em;
+}
+
+.field-item {
+    display: inline-block;
+    /* border: 1px solid black; */
+    background-color: #99cfff;
+    color: white;
+    margin-top: 30px;
+    margin-right: 5px;
+    font-size: 13px;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+.evaluation-container {
+    display: flex;
+    align-content: space-around;
+    flex-wrap: wrap;
+}
+
+.evaluation {
+    margin: 10px;
+    border-radius: 10px;
+    overflow: hidden;
+    width: 245px;
+    transition: transform 0.4s;
+    background-color: white;
+}
+
+.evaluation:hover {
+    transform: scale(1.05);
+}
+
+
+.evaluation .grid-container {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto auto auto;
+}
+
+.grid-title {
+    position: relative;
+    padding-top: 10px;
+    padding-bottom: 4px;
+    margin-bottom: 16px;
+    font-size: 20px;
+    background-color: #f2f2f2;
+    vertical-align: middle;
+}
+
+.grid-title span {
+    padding-left: 10px;
+    position: relative;
+    bottom: 5px;
+}
+
+.evaluation .grid-container .grid-title {
+    text-align: center;
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+
+.evaluation .grid-container .grid-textarea {
+    text-align: center;
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+
+.evaluation .grid-container .grid-button {
+    text-align: center;
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+
+.evaluation .grid-container .grid-button button {
+    outline: none;
+    padding: 10px;
+    border: 1px solid #99cfff;
+
+    background-color: white;
+    border-radius: 10px;
+    color: #99cfff;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    transition: 0.4s;
+}
+
+.evaluation .grid-container .grid-button button:hover {
+    border: 1px solid white;
+    background-color: #99cfff;
+    color: white;
+}
+
+.evaluation .grid-container .grid-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.evaluation .grid-container .grid-item input {
+    background-color: inherit;
+    width: 80px;
+    height: 80px;
+    border: none;
+    outline: none;
+    text-align: center;
+    font-size: 30px;
+    margin-bottom: 16px;
+}
+
+.evaluation .grid-container .grid-textarea textarea {
+    background-color: inherit;
+    border: 1px solid #ddd;
+    font-size: 12px;
+    border-radius: 10px;
+    resize: none;
+    outline: none;
+    width: calc(100% - 42.5px);
+    padding: 10px;
+}
+
+
+header {
+    /* background: black; */
+    box-shadow: 0 5px 10px 0 rgba(0, 64, 128, .05);
+    color: black;
+    background-color: white;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+}
+
+.nav {
+    width: 800px;
+    height: 60px;
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.nav div {
+    margin-right: 20px;
+}
+
+.nav div.nav-title {
+    font-size: 25px;
+    margin-right: 50px;
+}
+
+.nav div.nav-evaluator {
+    float: right;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.body {
+    display: flex;
+}
+
+body {
+    margin: 0;
 }
