@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/mua-audition/static/css/main.8d205648.chunk.css",
+    "main.js": "/mua-audition/static/js/main.7eb1b53e.chunk.js",
+    "main.js.map": "/mua-audition/static/js/main.7eb1b53e.chunk.js.map",
+    "runtime-main.js": "/mua-audition/static/js/runtime-main.4e17d159.js",
+    "runtime-main.js.map": "/mua-audition/static/js/runtime-main.4e17d159.js.map",
+    "static/js/2.5fa73ae2.chunk.js": "/mua-audition/static/js/2.5fa73ae2.chunk.js",
+    "static/js/2.5fa73ae2.chunk.js.map": "/mua-audition/static/js/2.5fa73ae2.chunk.js.map",
+    "index.html": "/mua-audition/index.html",
+    "precache-manifest.00bfab6d6014d69e5e45e7a43cb71efd.js": "/mua-audition/precache-manifest.00bfab6d6014d69e5e45e7a43cb71efd.js",
+    "service-worker.js": "/mua-audition/service-worker.js",
+    "static/css/main.8d205648.chunk.css.map": "/mua-audition/static/css/main.8d205648.chunk.css.map",
+    "static/js/2.5fa73ae2.chunk.js.LICENSE.txt": "/mua-audition/static/js/2.5fa73ae2.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.4e17d159.js",
+    "static/js/2.5fa73ae2.chunk.js",
+    "static/css/main.8d205648.chunk.css",
+    "static/js/main.7eb1b53e.chunk.js"
+  ]
+}
